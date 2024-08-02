@@ -1,3 +1,9 @@
+html, body {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .section_title {
     font-size: 2rem; /* Tamaño de fuente más grande */

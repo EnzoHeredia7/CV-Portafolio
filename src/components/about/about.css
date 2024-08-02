@@ -1,3 +1,11 @@
+html, body {
+    display: flex; /* Usa flexbox en el body para centrar el contenido verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 0; /* Elimina el padding por defecto */
+ 
+}
 
 .about {
     padding: 6rem 1rem; /* Ajusta el padding según el diseño */
@@ -27,7 +35,7 @@
 .about_info {
     display: grid;
     grid-template-columns: repeat(3, 140px);
-    gap: 6rem; /* Espacio entre los items en el grid */
+    gap: rem; /* Espacio entre los items en el grid */
     justify-content: center; /* Centra los items en el grid */
     margin-bottom: var(--mb-2); /* Espacio abajo de los .about_box */
 }
