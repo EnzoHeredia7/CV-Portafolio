@@ -1,0 +1,145 @@
+html, body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+:root {
+  --container-color: #f9f9f9;
+  --title-color: #333;
+  --button-color: #007bff;
+  --font-medium: 500;
+}
+
+.education_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.education_section_title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.educa_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.education_content {
+  background-color: var(--container-color);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 1.25rem;
+  width: calc(33.333% - 2rem);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  height: 230px;
+  padding-bottom: 2rem;
+}
+
+.education_icon {
+  font-size: 1.5rem;
+  color: var(--title-color);
+  margin-bottom: 1rem;
+}
+
+.education_title {
+  font-size: 1rem;
+  font-weight: var(--font-medium);
+  margin-bottom: 0.2rem;
+}
+
+.education_button {
+  font-size:2rem;
+  color: var(--button-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: auto; /* Empuja el botón hacia el final */
+  padding: 0.5rem ; /* Añade padding al botón */
+  color: #fff; /* Color del texto del botón */
+  border: none; /* Sin bordes */
+  border-radius: 0.2rem; /* Bordes redondeados */
+  transition: background-color 0.3s ease; /* Transición suave para el cambio de fondo */
+}
+
+
+
+
+/* Adicional: estilos generales para el botón--flex */
+.button--flex {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+/* Responsividad */
+@media (max-width: 1024px) {
+    .education_content {
+        width: calc(50% - 2rem); /* Ajusta el ancho para pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 768px) {
+    .education_content {
+        width: calc(100% - 2rem); /* Ajusta el ancho para pantallas pequeñas */
+        height: auto; /* Ajusta la altura en pantallas pequeñas */
+    }
+}
+
+
+  
+  .education_modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .education_modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+  }
+  
+  .education_modal-image {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+  }
+  
+  .education_modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+  
+
+  

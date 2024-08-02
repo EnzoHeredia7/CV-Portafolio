@@ -1,0 +1,117 @@
+html, body {
+    display: flex; /* Usa flexbox en el body para centrar el contenido verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 0; /* Elimina el padding por defecto */
+ 
+}
+
+.about {
+    padding: 6rem 1rem; /* Ajusta el padding según el diseño */
+    text-align: center; /* Centra el texto dentro del contenedor */
+    max-width: 1000px; /* Ajusta el ancho máximo según tus necesidades */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+.section_title {
+    font-size: 30px; /* Ajusta el tamaño del título según tus necesidades */
+    margin-bottom: 3rem; /* Espacio abajo del título */
+}
+
+.about_container {
+    display: flex; /* Usa flexbox para organizar la imagen y el contenido */
+    flex-direction: column; /* Disposición en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    gap: 2rem; /* Espacio entre la imagen y el contenido */
+}
+
+.about_img {
+    width: 400px;
+    border-radius: 1.5rem;
+    margin-bottom: -3rem;
+}
+
+.about_info {
+    display: grid;
+    grid-template-columns: repeat(3, 140px);
+    gap: 6rem; /* Espacio entre los items en el grid */
+    justify-content: center; /* Centra los items en el grid */
+    margin-bottom: var(--mb-2); /* Espacio abajo de los .about_box */
+}
+
+.about_box {
+    width: 180px;
+    background-color: var(--container-color);
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    text-align: center;
+    padding: 2rem 1.25rem;
+}
+
+.about_icon {
+    font-size: 1.9rem;
+    color: var(--title-color);
+    margin-bottom: var(--mb-0-5);
+}
+
+.about_title {
+    font-size: 16px;
+    font-weight: 15px;
+}
+
+.about_subtitle {
+    font-size: 13px;
+}
+
+.about_description {
+    margin-top: 1rem; /* Espacio arriba del párrafo */
+    text-align: center; /* Centra el texto dentro del párrafo */
+}
+
+.button {
+    margin-top: 1rem; /* Espacio arriba del botón */
+    display: flex;
+    justify-content: center; /* Centra el botón */
+    align-items: center; /* Centra el contenido del botón verticalmente */
+}
+
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .about_img {
+        width: 300px; /* Ajusta el ancho de la imagen para pantallas medianas */
+    }
+
+    .about_info {
+        grid-template-columns: 1fr; /* Una columna para pantallas medianas */
+        gap: 2rem; /* Ajusta el espacio entre los items */
+    }
+
+    .about_box {
+        width: auto; /* Ajusta el ancho del box para pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .about_img {
+        width: 250px; /* Ajusta el ancho de la imagen para pantallas pequeñas */
+    }
+
+    .about_info {
+        grid-template-columns: 1fr; /* Una columna para pantallas pequeñas */
+        gap: 1rem; /* Ajusta el espacio entre los items */
+    }
+
+    .about_box {
+        width: auto; /* Ajusta el ancho del box para pantallas pequeñas */
+        padding: 1rem; /* Ajusta el padding para pantallas pequeñas */
+    }
+
+    .section_title {
+        font-size: 24px; /* Ajusta el tamaño del título para pantallas pequeñas */
+    }
+
+    .about_description {
+        margin-top: 1rem; /* Ajusta el espacio arriba del párrafo para pantallas pequeñas */
+    }
+}

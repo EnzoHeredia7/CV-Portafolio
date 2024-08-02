@@ -1,0 +1,209 @@
+.home_container{
+    row-gap: 7rem;
+}
+.home_content {
+    grid-template-columns: 116px repeat(2, 1fr);
+    padding-top: 5.5rem;
+    column-gap: 2rem;
+    align-items: center;
+}
+
+.home_social {
+    display: grid;
+    grid-template-columns: max-content;
+    row-gap: 1rem;
+}
+
+.home_social-icon {
+    font-size: 1.25rem;
+    color: var(--title-color);
+}
+.home_social-icon:hover{
+    color: var(--title-color-dark);
+}
+
+.home_title {
+    font-size: var(--big-font-size);
+    margin-bottom: var(--mb-0-25);
+}
+
+
+
+.home_subtitle{
+    position: relative;
+    font-size: var(--h3-font-size);
+    padding-left: 5.4rem;
+    font-weight: var(--font-normal);
+    margin-bottom: var(--mb-1);
+
+    
+}
+
+
+
+
+.home_description {
+    max-width: 400px;
+    margin-bottom: var(--mb-3);
+}
+
+.home_img {
+    background: url(../../assets/Portafolio-civil.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 0 0 0 9px rgb(255 225 255 / 30% );
+    order: 1;
+    justify-self: center;
+    width: 300px;
+    height: 300px;
+    animation: profile_animate 6s ease-in-out infinite 1s;
+}
+
+@keyframes profile_animate{
+    0%{
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%
+    }
+
+    50%{
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+
+    100%{
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+}
+
+.home_scroll {
+    margin-left: 9.25rem;
+    
+}
+
+.wheel {
+    
+    animation: scroll 2s ease infinite;
+}
+
+@keyframes scroll{
+    0%{
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(3.75rem);
+    }
+}
+
+.home_scroll-name{
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+    margin-right: var(--mb-0-25);
+    margin-left: 2px;
+}
+
+.home_scroll-arrow {
+    font-size: 1.25rem;
+    color: var(--title-color);
+}
+
+@media screen and (max-width: 992px) {
+    .home_content {
+        grid-template-columns: 100px repeat(2, 1fr);
+        column-gap: 1.25rem;
+      }
+    
+      .home_subtitle {
+        padding-left: 3.75rem;
+        margin-bottom: var(--mb-1)
+      }
+      .home_subtitle::before {
+        width: 42px;
+        top: 0.8rem;
+      }
+      .home_description {
+        max-width: initial;
+        margin-bottom: var(--mb-2-5);
+      }
+      .home_img{
+        width: 250px;
+        height: 250px;
+        box-shadow: inset 0 0 0 8px rgb(255 225 255 / 30% );
+      }
+
+      .home_scroll {
+        margin-left: 7.5rem;
+      }
+  }
+  
+  /* For medium devices */
+  @media screen and (max-width: 768px) {
+    .home_content {
+        display: flex;
+        flex-direction: column; /* Cambia a disposición en columna */
+        align-items: center;
+        padding-top: 3.5rem;
+        gap: 1rem; /* Ajusta el espacio entre los elementos si es necesario */
+    }
+
+    .home_img {
+        order: -1; /* Mueve la imagen al principio */
+        justify-self: center;
+        box-shadow: inset 0 0 0 6px rgb(255 225 255 / 30%);
+        width: 200px;
+        height: 200px;
+        position: relative; /* Necesario para posicionar los iconos */
+    }
+
+    .home_social {
+        position: absolute;
+        top: 30%;
+        left: 0; /* Ajusta esta distancia para que los iconos sean visibles */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: rem;
+        /* Asegúrate de que los iconos no se oculten detrás de otros elementos */
+        z-index: 10; 
+    }
+
+    .home_social-icon {
+        font-size: 1.5rem; /* Ajusta el tamaño de los iconos si es necesario */
+        color: #000; /* Asegúrate de que el color de los iconos sea visible */
+    }
+
+    .home_data {
+        text-align: center; /* Centra el texto dentro de .home_data */
+        margin-top: 1rem; /* Ajusta la distancia hacia arriba si es necesario */
+    }
+
+    .home_scroll {
+        display: none;
+    }
+
+    
+}
+
+
+/* Para dispositivos muy pequeños */
+@media screen and (max-width: 350px) {
+    .home_img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .home_title {
+        font-size: var(--h2-font-size);
+    }
+
+    .home_subtitle {
+        font-size: var(--h4-font-size);
+    }
+
+    .home_description {
+        font-size: var(--small-font-size);
+    }
+}
+
+  
+
+

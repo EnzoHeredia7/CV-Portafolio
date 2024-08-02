@@ -1,0 +1,87 @@
+html, body {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section_title {
+    font-size: 2rem; /* Tamaño de fuente más grande */
+    font-weight: bold; /* Negrita para mayor énfasis */
+    color: var(--title-color); /* Usar el color de título definido */
+    text-align: center; /* Centrar el texto */
+    margin-bottom: 1rem; /* Espacio debajo del título */
+}
+
+.skills_container {
+    display: flex; /* Usamos flexbox para centrar el contenido */
+    flex-direction: column; /* Colocamos los elementos uno debajo del otro */
+    align-items: center; /* Centramos los elementos horizontalmente */
+    max-width: 800px; /* Define un ancho máximo para el contenedor */
+    margin: 0 auto; /* Centra el contenedor en la página */
+    gap: 1rem; /* Añadimos un espacio entre los elementos */
+}
+
+.skills_content {
+    background-color: var(--container-color);
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    border-radius: 1.25rem;
+    max-width: 450px; /* Define un ancho máximo para el contenido */
+    width: 100%; /* Asegura que el contenido ocupe todo el ancho disponible */
+    box-sizing: border-box; /* Incluye el padding y border dentro del width */
+}
+
+.skills_title {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    text-align: center;
+    margin-bottom: var(--mb-1-5);
+}
+
+.skills_box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que los elementos se distribuyan en varias filas */
+    gap: 1rem; /* Espacio entre los elementos */
+}
+
+.skills_group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    gap: 2.3rem; /* Espacio entre los elementos */
+    align-items: flex-start;
+}
+
+.skills_data {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+.skills_name {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    line-height: 18px;
+}
+
+.skill_level {
+    font-size: var(--tiny-font-size);
+}
+
+/* Media queries para dispositivos más pequeños */
+@media (max-width: 768px) {
+    .skills_group {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .skills_group {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+
+    .skills_content {
+        padding: 1rem; /* Reduce el padding en pantallas pequeñas */
+    }
+}
