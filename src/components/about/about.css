@@ -35,7 +35,7 @@ html, body {
 .about_info {
     display: grid;
     grid-template-columns: repeat(3, 140px);
-    gap: rem; /* Espacio entre los items en el grid */
+    gap: 4rem; /* Espacio entre los items en el grid */
     justify-content: center; /* Centra los items en el grid */
     margin-bottom: var(--mb-2); /* Espacio abajo de los .about_box */
 }

@@ -6,13 +6,14 @@
   --header-height: 3rem;
 
   /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
   --hue: 0;
   --sat: 0%;
   --title-color: hsl(var(--hue), var(--sat), 20%);
   --title-color-dark: hsl(var(--hue), var(--sat), 0%);
   --text-color: hsl(var(--hue), var(--sat), 46%);
   --body-color: hsl(var(--hue), var(--sat), 98%);
-  --container-color: #fff; /* Asegúrate de tener esto definido */
+  --container-color: #fff;
 
   /*========== Font and typography ==========*/
   --body-font: "Poppins", sans-serif;
@@ -65,7 +66,8 @@
 /*=============== BASE ===============*/
 * {
   margin: 0;
-  padding: 0;
+  padding: 0px;
+
   box-sizing: border-box;
 }
 
@@ -79,10 +81,9 @@ input,
 textarea {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  background-color: var(--body-color);
-  color: var(--text-color);
-  margin: 0;
 }
+
+
 
 h1,
 h2,
@@ -112,7 +113,7 @@ img {
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section {
-  padding: 1rem 0 2rem;
+  padding: 6rem 0 2rem;
 }
 
 .section__title {
@@ -209,7 +210,7 @@ img {
   }
 
   .container {
-    margin-left: var(--mb-2);
-    margin-right: var(--mb-2);
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
   }
 }
